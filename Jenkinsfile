@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'javac Main.java'
+                bat 'javac Main.java'   // Windows command
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'java Main'
+                bat 'java Main'         // Windows command
             }
         }
         stage('Archive') {
